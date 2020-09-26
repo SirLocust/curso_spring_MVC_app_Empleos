@@ -8,15 +8,26 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import io.devsirlocust.empleos.model.Vacante;
+
 @Controller
 public class HomeController {
     
-    
+    @GetMapping("/detalle")
+    public String showDetail(final Model model){
+        final Vacante vacante = new Vacante();
+        vacante.setName("ingeniero de comunicaciones");
+        vacante.setDescription("se solicita ingeniero parada dar soporte");
+        vacante.setDate(new Date());
+        vacante.setWage(9700.0);
+        model.addAttribute("vacante", vacante);
+        return "detalle";
+    }
 
     @GetMapping("/listado")
-    public String showList(Model model){
+    public String showList(final Model model){
 
-        List<String> lista = new LinkedList<>();
+        final List<String> lista = new LinkedList<>();
         lista.add("1");
         lista.add("2");
         lista.add("3");
@@ -29,14 +40,12 @@ public class HomeController {
 
 
     @GetMapping("/")
-    public String showHome(Model model){
-        // model.addAttribute("message", "Hola mundo");
-        // model.addAttribute("Date", new Date());
+    public String showHome(final Model model){
 
-        String name = "auxiliar de contabilidad";
-        Date datePub = new Date();
-        double wage = 9000.0;
-        boolean valid = true;
+        final String name = "auxiliar de contabilidad";
+        final Date datePub = new Date();
+        final double wage = 9000.0;
+        final boolean valid = true;
 
         model.addAttribute("name", name);
         model.addAttribute("date", datePub);
