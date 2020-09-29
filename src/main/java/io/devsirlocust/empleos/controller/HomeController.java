@@ -76,7 +76,7 @@ public class HomeController {
             final Vacante vacante = new Vacante();
             vacante.setId(1);
 
-            vacante.setName("ingeniero de comunicaciones");
+            vacante.setName("ingeniero de industrial");
             vacante.setDescription("se solicita ingeniero parada dar soporte");
             vacante.setDate(new Date());
             vacante.setWage(9700.0);
