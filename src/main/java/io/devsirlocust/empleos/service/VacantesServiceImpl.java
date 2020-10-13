@@ -10,9 +10,10 @@ import io.devsirlocust.empleos.model.Vacante;
 
 @Service
 public class VacantesServiceImpl implements IVacanteService {
-    
+
     private List<Vacante> list = null;
-    public VacantesServiceImpl(){
+
+    public VacantesServiceImpl() {
         this.list = new LinkedList<>();
 
         try {
@@ -44,30 +45,28 @@ public class VacantesServiceImpl implements IVacanteService {
             vacante2.setWage(9700.0);
             vacante2.setImage("logo3.png");
 
-
             list.add(vacante);
             list.add(vacante1);
             list.add(vacante2);
 
-
         } catch (Exception e) {
-            
+
             System.out.println(e);
         }
-        
+
     }
 
     @Override
-    public List<Vacante> searchAll(){
+    public List<Vacante> searchAll() {
 
         return list;
     }
 
     @Override
-    public Vacante searchForID(Integer idVacante){
+    public Vacante searchForID(Integer idVacante) {
 
-        for( Vacante v : this.list){
-            if(v.getId()==idVacante){
+        for (Vacante v : this.list) {
+            if (v.getId().equals(idVacante)) {
                 return v;
             }
         }
