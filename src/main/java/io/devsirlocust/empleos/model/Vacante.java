@@ -9,6 +9,17 @@ public class Vacante {
     private String description;
     private Date date;
     private Double wage;
+    private String image;
+
+
+
+    public void setImage(String img){
+        this.image = img;
+    }
+
+    public String getImage(){
+        return this.image;
+    }
 
     public Integer getId() {
         return id;

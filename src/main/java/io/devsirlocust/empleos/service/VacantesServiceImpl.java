@@ -24,6 +24,7 @@ public class VacantesServiceImpl implements IVacanteService {
             vacante.setDescription("se solicita ingeniero parada dar soporte");
             vacante.setDate(new Date());
             vacante.setWage(9700.0);
+            vacante.setImage("logo1.png");
 
             final Vacante vacante1 = new Vacante();
             vacante1.setId(2);
@@ -32,14 +33,16 @@ public class VacantesServiceImpl implements IVacanteService {
             vacante1.setDescription("se solicita ingeniero parada dar soporte");
             vacante1.setDate(new Date());
             vacante1.setWage(9700.0);
+            vacante1.setImage("logo2.png");
 
             final Vacante vacante2 = new Vacante();
             vacante2.setId(3);
 
-            vacante2.setName("ingeniero de comunicaciones");
-            vacante2.setDescription("se solicita ingeniero parada dar soporte");
+            vacante2.setName("ingeniero industrial");
+            vacante2.setDescription("se solicita ingeniero con estudios en produccion");
             vacante2.setDate(new Date());
             vacante2.setWage(9700.0);
+            vacante2.setImage("logo3.png");
 
 
             list.add(vacante);
